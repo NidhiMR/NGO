@@ -97,7 +97,6 @@ header .container .nav-logo img {
     justify-content: center;
     width: 650px;/* 512px THIS IS CHANGED TO FIT MY LAPTOP */
     height: 400px;
-    border: 10px solid white;
     margin: 0 auto;/*  THIS IS NOT IN THE ORIGINAL CODE, MIGHT NOT BE CENTER FOR EVERY SYSTEM  */
     overflow: hidden;  
     z-index: 2;
