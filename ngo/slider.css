@@ -193,7 +193,7 @@ header .menu ul li:hover::after {
 .thumbnail .item{
     width: 200px;
     height: 100%;
-    filter: brightness(.3);
+    filter: brightness(.5);
     transition: .5s;
 }
 
@@ -206,7 +206,7 @@ header .menu ul li:hover::after {
 }
 
 .thumbnail .item.active{
-    filter: brightness(1.5);   
+    filter: brightness(1.1);   
 }
     
 .thumbnail .item .content{    
