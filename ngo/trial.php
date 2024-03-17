@@ -50,7 +50,12 @@ require_once 'includes/login_view.inc.php';
                 <div class="input-box">
                     <button type="submit" class="submit" value="Sign In">Sign In</button>
                 </div>
-                
+                <div class="two-col">
+                    <div class="one">
+                        <input type="checkbox" id="login-check">
+                        <label for="login-check"> Remember Me</label>
+                    </div>
+                    
                 </div>
             </div></form>
             <?php
@@ -88,10 +93,6 @@ require_once 'includes/login_view.inc.php';
     <?php 
 check_signup_errors();
 ?>
-<h3>Logout</h3>
-<form action="includes/logout.inc.php" method="post">
-    <button>Logout</button>
-</form>
     <script>
         var a=document.getElementById("loginBtn");
         var b=document.getElementById("RegisterBtn");
