@@ -1,11 +1,8 @@
+
 <?php
-require_once 'includes/config_session.inc.php';
-require_once 'includes/signup_view.inc.php';
-require_once 'includes/login_view.inc.php';
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,7 +45,7 @@ require_once 'includes/login_view.inc.php';
                     <i class="bx bx-lock-alt"></i>
                 </div>
                 <div class="input-box">
-                    <button type="submit" class="submit" value="Sign In">Sign In</button>
+                    <button type="submit" name="submit"class="submit" value="Sign In">Sign In</button>
                 </div>
                 <div class="two-col">
                     <div class="one">
@@ -58,9 +55,7 @@ require_once 'includes/login_view.inc.php';
                     
                 </div>
             </div></form>
-            <?php
-            check_login_errors();
-            ?>
+            
             <!------------------- registration form -------------------------->
             <div class="register-container" id="register">
                 <div class="top">
@@ -84,15 +79,13 @@ require_once 'includes/login_view.inc.php';
                     <i class="bx bx-lock-alt"></i>
                 </div>
                 <div class="input-box">
-                    <button type="submit" class="submit" value="Register">Register</button>
+                    <button type="submit" class="submit" name="submit" value="Register">Register</button>
                 </div>
                 
             </div>
         </div>
     </div> </form>  
-    <?php 
-check_signup_errors();
-?>
+
     <script>
         var a=document.getElementById("loginBtn");
         var b=document.getElementById("RegisterBtn");
@@ -116,6 +109,8 @@ check_signup_errors();
             y.style.opacity = 1;
         }
     </script>
+
+
 
 
 
