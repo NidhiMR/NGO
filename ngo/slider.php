@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +25,7 @@
 <div class="slider">
 <div class="list">
             <div class="item active">
-                <img src="./imag/env.jpg">
+                <img src="./imag/1.env.jpg">
                 <div class="content">
                     <p>Activity Hours:4 Credits:3</p>
                     <h2>Forest Regeneration </h2>
@@ -32,14 +35,14 @@
                 </div>
             </div>
             <div class="item">
-                    <img src="./imag/animals.jpg">
+                    <img src="./imag/2.animals.jpg">
                     <div class="content">
                         <p>Activity Credits:4</p>
                         <h2>Animal Rescue and Rehabilitation </h2>
                         Join us in creating a safe haven for animals in need at the "Healing Paws" sanctuary. Our center provides a nurturing environment for injured, orphaned, or abused animals, offering them medical care, rehabilitation, and a chance at a new life. 
             </div></div>
             <div class="item">
-                        <img src="./imag/kids.jpg">
+                        <img src="./imag/3.kids.jpg">
                         <div class="content">
                             <p>Activity </p>
                             <h2>Children's Education Workshops</h2>
@@ -48,7 +51,7 @@
                 </div>
             </div>
             <div class="item">
-                            <img src="./imag/money.jpg">
+                            <img src="./imag/4.money.jpg">
                             <div class="content">
                                 <p>Activity Date:25/03/2024</p>
                                 <h2>Fundraiser Run</h2>
@@ -56,7 +59,7 @@
                 </div>
             </div>
             <div class="item">
-                    <img src="./imag/elderly.jpg">
+                    <img src="./imag/5.elderly.jpg">
                     <div class="content">
                         <p>Activity</p>
                         <h2>Elderly Care Volunteer Program</h2>
@@ -74,43 +77,69 @@
 
 <div class="thumbnail">
     <div class="item active">
-        <img src="./imag/env.jpg">
+        <img src="./imag/1.env.jpg">
         <div class="content" >
-        <button onclick="window.location.href='https://www.savegreen.in/savegreen/join-us.html';">
-            Forest Regeneration</button>
+       <button activity_id="1"-onclick="window.location.href='https://www.savegreen.in/savegreen/join-us.html';">Register</button>
+         <!---<form method="POST" action="register_activity.php">
+    <input type="hidden" name="username" value="<?php echo $_SESSION['user_username']; ?>">
+    <input type="hidden" name="activity_id" value="1">
+    <button type="submit" name="register">Register</button>
+</form>------>
         </div>
     </div>   
     <div class="item">
-        <img src="./imag/animals.jpg" >
+        <img src="./imag/2.animals.jpg" >
         <div class="content" >
-        <button  onclick="window.location.href='https://cupabangalore.org/volunteer/';">
-            Animal Rescue and Rehabilitation
+        <button activity_id="2" onclick="window.location.href='https://cupabangalore.org/volunteer/';">Register</button>
+       <!--- <form method="POST" action="register_activity.php">
+    <input type="hidden" name="username" value="<?php echo $_SESSION['user_username']; ?>">
+    <input type="hidden" name="activity_id" value="2">
+    <button type="submit" name="register">Register</button>
+</form>------>
+            
         </button>
         </div>
     </div> 
     <div class="item">
-        <img src="./imag/kids.jpg">
+        <img src="./imag/3.kids.jpg">
         <div class="content" >
-        <button  onclick="window.location.href='https://www.nmgct.org/volunteer.html';">
-            Children's Education Workshops</button>
+    <button activity_id="3" onclick="window.location.href='https://www.nmgct.org/volunteer.html';">Register</button>
+    <!---<form method="POST" action="register_activity.php">
+    <input type="hidden" name="username" value="<?php echo $_SESSION['user_username']; ?>">
+    <input type="hidden" name="activity_id" value="3">
+    <button type="submit" name="register">Register</button>
+</form>------>
+        
         </div>
     </div>
     <div class="item">
-        <img src="./imag/money.jpg">
+        <img src="./imag/4.money.jpg">
         <div class="content" >
-        <button onclick="window.location.href='https://www.indiarunning.com/events/pawathon--fundraiser-run-12394';">
-            Fundraiser Run</button>
+        <button activity_id="4"onclick="window.location.href='https://www.indiarunning.com/events/pawathon--fundraiser-run-12394';">Register</button>
+      <!-----  <form method="POST" action="register_activity.php">
+        <form method="POST" action="register_activity.php">
+    <input type="hidden" name="username" value="<?php echo $_SESSION['user_username']; ?>">
+    <input type="hidden" name="activity_id" value="4">
+    <button type="submit" name="register">Register</button>
+</form> ------>
+            
         </div>
     </div>
     <div class="item">
-        <img src="./imag/elderly.jpg" >
+        <img src="./imag/5.elderly.jpg" >
         <div class="content" >
-        <button  onclick="window.location.href='https://www.vtvo.org/pv';" >
-            Elderly Care 
-        </button></div>
+    <button activity_id="5" onclick="window.location.href='https://www.vtvo.org/pv';">Register</button>
+
+    <!---<form method="POST" action="register_activity.php">
+    <input type="hidden" name="username" value="<?php echo $_SESSION['user_username']; ?>">
+    <input type="hidden" name="activity_id" value="5">
+    <button type="submit" name="register">Register</button>
+</form> ------> 
+            
+        </div>
     </div>
     </div>
     </div>
     <script src="app.js"></script>
 </body>
-</html>
+</html> 
