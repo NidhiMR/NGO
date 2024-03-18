@@ -251,19 +251,3 @@ gap: 5px;
         
     }
 }
-.form-error,
-.form-success {
-    position: absolute;
-    top: 90%; /* Adjust as needed */
-    left: 50%; /* Adjust as needed */
-    transform: translate(-50%, -50%);
-    background-color: rgba(255, 0, 0, 0.8); /* Red with 80% opacity */
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    z-index: 999; /* Ensure the messages are on top of other elements */
-}
-
-.form-success {
-    background-color: rgba(0, 128, 0, 0.8); /* Green with 80% opacity */
-}
