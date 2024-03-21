@@ -33,7 +33,7 @@ class SignupContr extends Signup {
         }
     
         $this->setUser($this->username, $this->email, $this->pwd);
-        header("Location: ../logged.html");
+        header("Location: ../trial.php");
         exit();
     }
     
