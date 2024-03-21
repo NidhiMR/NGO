@@ -3,153 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="don.css">
     <title>NGO Volunteer Database</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 20px;
-            background-color: #f2f2f2;
-            background-image: url('./imag/don.jpg'); /* Set background image */
-            background-size: cover; /* Ensure the image covers the entire background */
-            background-position: center; /* Center the image */
-            background-repeat: no-repeat; /* Do not repeat the image */
-        }
-
-        h2 {
-            text-align: center;
-            color: #333;
-        }
-
-        form {
-            max-width: 600px;
-            margin: auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-            color: #555;
-        }
-
-        input, select {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 16px;
-            display: inline-block;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        button:hover {
-            opacity: 0.8;
-        }
-
-        .success-message {
-            color: #ffacf1;
-            font-weight: bold;
-            text-align: center;
-            margin-top: 16px;
-        }
-
-        /* Decorative styles */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-
-        form {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            background-color: #fff;
-            border-radius: 8px;
-        }
-    </style>
 </head>
 <body>
-
-    <h2>NGO Donation Form</h2>
-
-    <form id="volunteerForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="address">Address:</label>
-        <input type="text" id="address" name="address" required>
-
-        <label for="Donation">Donation Type :</label>
-        <select id="Donation" name="Donation" required>
-            <option value="type1">Money</option>
-            <option value="type2">Clothes</option>
-            <option value="type3">Food</option>
-        </select> 
-
-        <label for="preferredNgo">Preferred NGO:</label>
-        <select id="preferredNgo" name="preferredNgo" required>
-            <option value="ngo1">Akshaya Chaitanya</option>
-            <option value="ngo2">Sightsavers India</option>
-            <option value="ngo3">Smile Foundation</option>
-            <option value="ngo4">Akshaya Paatra</option>
-            <option value="ngo5">Goonj</option>
-            <option value="ngo6">Pratham</option>
-        </select>
-
-        <button type="button" onclick="submitForm()">Submit</button>
-
-        <p class="success-message" id="successMessage"></p>
-    </form>
-
-    <script>
-        function submitForm() {
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const address = document.getElementById('address').value;
-            const Donation = document.getElementById('Donation').value;
-            const preferredNgo = document.getElementById('preferredNgo').value;
-
-            // Perform client-side validation if needed
-
-            // Prepare data to send to the server
-            const formData = {
-                name: name,
-                email: email,
-                address: address,
-                Donation: Donation,
-                preferredNgo: preferredNgo
-            };
-
-            // Simulate an API call with a delay (replace with actual API call)
-            setTimeout(() => {
-                // Clear the form
-                document.getElementById('volunteerForm').reset();
-
-                // Display success message to the user
-                document.getElementById('successMessage').innerText = 'Form submitted successfully!';
-            }, 1000);
-        }
-    </script>
-
+   
+    <div class="fullContainer banner" id="home"> 
+        <header>
+            <div class="header-container">
+                <div class="logo">
+                    <img src="./imag/logo.png" alt="Logo">
+                    <h4 class="logotext">ImpactLinK</h4>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="logged.html">Home</a></li>
+                        <li><a href="logged.html">About Us</a></li>
+                        <li><a href="don.html">Donation</a></li>
+                        <li><a href="slider.php">Activities</a></li>
+                        <li><a href="profil.php">Profile</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        
+    <div class="container">        
+        <form id="volunteerForm" method="POST" onsubmit="submitForm(); return false;">
+           <!--- <label for="name">Username:</label>
+            <input type="text" id="username" name="username" required>       -->
+            
+            <label for="Donation">Donation Amount:</label>
+            <input type="number" id="amount" name="amount" required>
+        
+            <label for="preferredNgo">NGO ID:</label>
+            <input type="text" id="ngo_id" name="ngo_id" required>
+        
+            <button type="submit" id="submitBtn" disabled>Submit</button>
+        
+            <button type="button" onclick="displayNGOs()">Show NGOs</button>
+            <button type="button" onclick="displayBranchIds()" id="branchButton" disabled>Show Branch IDs</button>
+            <p id="ngoDetails"></p>
+            <input type="text" id="branchId" name="branchId" placeholder="Enter Branch ID" disabled>
+            <p id="branchCity"></p>
+        
+            <div id="errorMessage" style="display: none; color: red;">Please fill in all fields.</div>
+            <div id="successMessage" style="display: none; color: green;">Form submitted successfully!</div>
+        </form>
+    </div>
+    
+    <script src="don.js"></script>
 </body>
 </html>
