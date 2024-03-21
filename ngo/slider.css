@@ -1,74 +1,100 @@
+@font-face {
+    font-family: Stardom;
+    src: url(./fonts/Stardom_Complete/Fonts/OTF/Stardom-Regular.otf);
+}:root {
+    --themeBlue: #209564dc;
+}
+
 body{
     font-family: Poppins;
     margin: 0;
-    background-color: #010101;
-    color:#0d4878;
+    
+    color: #fff;
     }
+
+
 
 header {
-    width: 1200px;
-    max-width: 90%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 50px 1fr 50px;
-    grid-template-rows: 50px; 
-    justify-content: center;
-    align-items: center;
-    position:relative;
-    z-index: 100;
-}
-header .logo{
-    font-weight: bold;
-    cursor: pointer;
+        width: 100%;
+        height: 17%;
+        font-family: Stardom;
+        
+        position: relative;
+        z-index: 3;
+
     }
-
-header .menu{
-    padding: 0;
-    margin: 50;
-    list-style: none;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    gap: 20px;
-    font-weight: 500;
-}
-
-header .menu ul li{
-    padding: 0;
-    list-style: none;
-    display: inline-block;
-    margin: 0 20px;
-    position: relative;
-    justify-content: center;
-    gap: 20px;
-    font-weight: 500;
-}
-
-header .menu ul li a{
-    text-decoration: none;
-    text-transform: capitalize;
-    color:#0d4878;
-
-}
-
-header .menu ul li::after{
-    content: '';
-    height: 3px;
-    width: 0;
-    background: #009688;
-    position: absolute;
-    left: 0;
-    bottom: -20px;
-    transition: 0.5s;
-}
-header .menu ul li:hover::after {
-    width: 100%;
-}
+    
+header .container {
+        display: flex;
+        margin-top: 0;
+        justify-content: space-between;
+        z-index: 2;
+    }
+    
+header .container .logo {
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: #fff;
+        padding: 0;
+        border: 0;
+        
+        /* Arrange the logo and text in a column */
+        align-items: center;
+    }
+    
+header .container .logo .logotext {
+        font-size: 20px;
+        margin-top: -30px;
+    
+        color: #fff;
+    }
+    
+header .container .logo img {
+        height: 150px;
+        margin-top:-25px ;
+    }
+    header nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        margin-top: 20px;
+        display: flex;
+        list-style-type: none;
+    }
+    
+header nav ul li {
+        display: inline-block;
+        
+        
+    }
+    
+header nav ul li a {
+        margin-top: -30px; /* Adjust the margin-top value */
+        display: inline-block;
+        height: 75px;
+        line-height: 75px;
+        padding: 0 20px;
+        text-decoration: none;
+        text-transform: capitalize;
+        font-size: 20px;
+        color: #fff;
+        transition: 0.3s;
+    }
+    
+    
+header nav ul li a:hover {
+        background-color: var(--themeBlue);
+    }
+    
 
 .slider{
     height: 100vh;
-    margin-top: -50px;    
+    margin-top: -150px;    
     position: relative;   
+    z-index: 1;
     }
 
 .slider .list .item{
@@ -83,6 +109,7 @@ header .menu ul li:hover::after {
     width: 100%;   
     height: 100%;    
     object-fit: cover;   
+    
 }
 
 .slider .list .item::after{
@@ -98,7 +125,7 @@ header .menu ul li:hover::after {
 .slider .list .item .content{
     position: absolute;
     color: aliceblue;
-    left: 10%;
+    left: 13%;
     top:10%;
     width: 500px;
     max-width: 50%;
@@ -110,13 +137,13 @@ header .menu ul li:hover::after {
     text-transform: uppercase; 
     letter-spacing : 10px;
     font-size: 24px;
-    
+    margin-top: 10px;
 }
 
     
 .slider .list .item .content h2{   
     font-size: 300%;
-    margin: 0;
+    margin-top: 10px;
 }
 
 .slider .list .item.active{
