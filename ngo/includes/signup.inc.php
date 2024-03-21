@@ -20,7 +20,7 @@ if (isset($_POST["submit"])) {
     $signup = new SignupContr($username, $pwd, $email);
     try {
         $signup->signupUser();
-        header("Location: http://localhost/ngo/logged.html");
+        header("Location: http://localhost/ngo/trial.php");
         exit();
     } catch (Exception $e) {
         echo "Error: " . $e->getMessage();
