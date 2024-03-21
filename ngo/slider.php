@@ -10,17 +10,32 @@
     <link rel="stylesheet" href="slider.css">
 </head>
 <body>
-    <header>
-        
-            <div class="logo">ImpactLink</div>
-                <ul class="menu">
-                    <li>Home</a></li>
-                    <li>About Us</a></li>
-                    <li>Donation</a></li>
-                    <li>Profile</a></li>
-                    <li>Activities</a></li>
-                </ul>
+<header>
+        <div class="container">
+            <div class="logo">
+                <img src="./imag/logo.png" alt="Logo">
+                <h4 class="logotext">ImpactLink</h4>
             </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="logged.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="logged.html">About Us</a>
+                    </li>
+                    <li>
+                        <a href="don.html">Donation</a>
+                    </li>
+                    <li>
+                        <a href="slider.php">Activities</a>
+                    </li>
+                    <li>
+                        <a href="profil.php">Profile</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
 <div class="slider">
 <div class="list">
@@ -79,7 +94,7 @@
     <div class="item active">
         <img src="./imag/1.env.jpg">
         <div class="content" >
-       <button activity_id="1"-onclick="window.location.href='https://www.savegreen.in/savegreen/join-us.html';">Register</button>
+       <button activity_id="1" onclick="window.location.href='https://www.savegreen.in/savegreen/join-us.html';">Register</button>
          <!---<form method="POST" action="register_activity.php">
     <input type="hidden" name="username" value="<?php echo $_SESSION['user_username']; ?>">
     <input type="hidden" name="activity_id" value="1">
